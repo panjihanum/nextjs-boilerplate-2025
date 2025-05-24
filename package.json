@@ -12,9 +12,13 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.77.0",
+    "@tanstack/react-query-devtools": "^5.77.0",
+    "class-variance-authority": "^0.7.1",
     "next": "15.1.8",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -31,11 +35,11 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "next lint --fix",
-      "npx prettier --write"
+      "npx next lint --fix .",
+      "npx prettier --write ."
     ],
     "*.{json,css,scss,md}": [
-      "npx prettier --write"
+      "npx prettier --write ."
     ]
   }
 }
